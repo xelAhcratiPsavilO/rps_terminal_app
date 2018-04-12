@@ -1,7 +1,7 @@
 class Game
 
   def phrase
-    "welcome to the game"
+    "Welcome to the RPS game. Choose rock, paper or scissors"
   end
 
   def confirmation

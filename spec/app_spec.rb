@@ -4,7 +4,7 @@ describe Game do
 
   context '#phrase' do
     it 'puts my string' do
-      expect(subject.phrase).to eq('welcome to the game')
+      expect(subject.phrase).to eq('Welcome to the RPS game. Choose rock, paper or scissors')
     end
   end
 
