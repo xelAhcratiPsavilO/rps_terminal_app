@@ -8,11 +8,10 @@ describe Game do
     end
   end
 
-  context '#confirmation' do
+  context '#confirmation_human' do
     it 'returns one choice or another depending on the stub' do
       allow(subject).to receive(:gets) { 'rock' }
-      expect(subject.confirmation).to eq('You chose rock')
-
+      expect(subject.confirmation_human).to eq('You chose rock')
     end
   end
 
@@ -24,12 +23,12 @@ describe Game do
   end
 
   context "#tell_winner" do
-      before { srand(0) }
+      before { srand(1) }
     it "It tells who wins" do
-      allow(subject).to receive(:gets) { 'rock' }
-      subject.confirmation
+      allow(subject).to receive(:gets) { 'scissors' }
+      subject.confirmation_human
       subject.pc_move
-      expect(subject.tell_winner).to eq('Draw')
+      expect(subject.tell_winner).to eq('You won')
     end
   end
 
